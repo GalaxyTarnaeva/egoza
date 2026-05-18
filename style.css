@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2{
+    font-weight: 400;
+}
+
+p,
+button{
+    font-weight: 400;
+}
+
+
+/* slider */
+.slider{
+    display: flex;
+    width: auto;
+    height: 100vh;
+    height: 100dvh;
+    transition: transform 0.5s ease;
+}
+
+.slide{
+    position: relative;
+    flex: 0 0 100vw;
+    min-width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+/* content */
+
+
+
+
+
+
+
+
+/* controls */
+.controls{
+    position: fixed;
+    bottom: 60px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    height: 22px;
+    z-index: 100;
+}
+
+.menu{
+    margin-right: 36px;
+}
+
+#prevBtn{
+    margin: 0;
+}
+
+#nextBtn{
+    margin: 0;
+}
+
+.controls button{
+    width: 26px;
+    height: 22px;
+    padding: 0;
+    line-height: 0;
+    align-self: center;
+    flex: 0 0 auto;
+}
+
+.controls .pattern-toggle{
+    display: none;
+    width: 148px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #000000;
+    border-radius: 999px;
+    color: #000000;
+    background: transparent;
+    font-size: 14px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.controls .pattern-toggle:hover{
+    color: #29AFD4;
+    border-color: #29AFD4;
+    transform: none;
+}
+
+.controls .pattern-toggle:active{
+    color: #ffffff;
+    border-color: #1A94B5;
+    background: #1A94B5;
+}
+
+.controls .pattern-toggle.active{
+    color: #29AFD4;
+    border-color: #29AFD4;
+    background: transparent;
+}
+
+.controls .mockup-toggle{
+    display: none;
+    width: 128px;
+    height: 24px;
+    margin-left: 36px;
+    padding: 0 14px;
+    border: 1px solid #000000;
+    border-radius: 999px;
+    color: #000000;
+    background: transparent;
+    font-size: 12px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.controls .mockup-toggle:hover{
+    color: #29AFD4;
+    border-color: #29AFD4;
+    transform: none;
+}
+
+.controls .mockup-toggle:active{
+    color: #ffffff;
+    border-color: #1A94B5;
+    background: #1A94B5;
+}
+
+.controls img{
+    display: block;
+    width: 26px;
+    height: 22px;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+.menu-panel{
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background: #111;
+    transition: .3s;
+    z-index: 999;
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.menu-panel.active{
+    left: 0;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.menu-item{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #1f1f1f;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 15px;
+}
+
+.menu-item:hover{
+    background: #333;
+}
+
+@media (max-width: 1180px){
+    .slide{
+        padding: 42px;
+    }
+
+    .controls{
+        left: 42px;
+        bottom: 42px;
+        gap: 28px;
+    }
+
+    .menu{
+        margin-right: 28px;
+    }
+
+    .controls .mockup-toggle{
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 900px){
+    .slide{
+        align-items: flex-start;
+        padding: 28px 24px 96px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+    }
+
+    .container{
+        height: auto;
+        min-height: calc(100dvh - 124px);
+    }
+
+    .controls{
+        left: 24px;
+        bottom: 24px;
+        gap: 24px;
+        height: 26px;
+    }
+
+    .menu{
+        margin-right: 20px;
+    }
+
+    .controls button,
+    .controls img{
+        width: 28px;
+        height: 24px;
+    }
+
+    .controls .pattern-toggle{
+        width: 148px;
+        height: 32px;
+        margin-left: 2px;
+        font-size: 13px;
+    }
+
+    .controls .mockup-toggle{
+        width: 128px;
+        height: 30px;
+        margin-left: 2px;
+        font-size: 12px;
+    }
+
+    .menu-panel{
+        left: -86vw;
+        width: 86vw;
+        padding: 28px 16px;
+    }
+
+    .menu-panel.active{
+        left: 0;
+    }
+}
+
+@media (max-width: 520px){
+    .slide{
+        padding: 22px 18px 92px;
+    }
+
+    .controls{
+        left: 18px;
+        bottom: 22px;
+        gap: 20px;
+    }
+
+    .menu{
+        margin-right: 16px;
+    }
+
+    .controls .pattern-toggle,
+    .controls .mockup-toggle{
+        margin-left: 0;
+    }
+}
+
