@@ -4,6 +4,7 @@ const slides = document.querySelectorAll('.slide');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
+const controls = document.querySelector('.controls');
 const menuBtn = document.querySelector('.menu');
 const patternToggle = document.querySelector('.pattern-toggle');
 const mockupToggle = document.querySelector('.mockup-toggle');
@@ -112,6 +113,48 @@ const menuPanel = document.querySelector('.menu-panel');
 const menuList = document.querySelector('.menu-list');
 
 
+function placeControlsInViewport() {
+    if (!controls) {
+        return;
+    }
+
+    const viewport = window.visualViewport;
+    const viewportWidth = viewport ? viewport.width : window.innerWidth;
+    const viewportHeight = viewport ? viewport.height : window.innerHeight;
+    const viewportLeft = viewport ? viewport.offsetLeft : 0;
+    const viewportTop = viewport ? viewport.offsetTop : 0;
+    const isCompactViewport = viewportWidth <= 1024 || window.innerWidth <= 1024;
+
+    if (!isCompactViewport) {
+        controls.style.left = '';
+        controls.style.right = '';
+        controls.style.top = '';
+        controls.style.bottom = '';
+        controls.style.width = '';
+        controls.style.maxWidth = '';
+        controls.style.zIndex = '';
+        return;
+    }
+
+    const sideInset = viewportWidth <= 640 ? 16 : 30;
+    const bottomInset = viewportWidth <= 640 ? 18 : 28;
+    const controlsHeight = controls.getBoundingClientRect().height || controls.offsetHeight || 24;
+
+    controls.style.left = `${Math.round(viewportLeft + sideInset)}px`;
+    controls.style.right = 'auto';
+    controls.style.bottom = 'auto';
+    controls.style.top = `${Math.round(viewportTop + viewportHeight - controlsHeight - bottomInset)}px`;
+    controls.style.width = 'auto';
+    controls.style.maxWidth = `${Math.max(0, Math.round(viewportWidth - sideInset * 2))}px`;
+    controls.style.zIndex = '2000';
+}
+
+
+function updateControlsPosition() {
+    placeControlsInViewport();
+    requestAnimationFrame(placeControlsInViewport);
+}
+
 
 
 
@@ -174,6 +217,8 @@ function updateSlider() {
     if (mockupToggle) {
         mockupToggle.style.display = mockupSlides[currentIndex] ? 'inline-flex' : 'none';
     }
+
+    updateControlsPosition();
 
 }
 
@@ -245,7 +290,7 @@ slides.forEach((slide, index) => {
 });
 
 
-document.querySelectorAll('.toc-item[data-slide]').forEach((item) => {
+document.querySelectorAll('.toc-item[data-slide], .section-subnav__item[data-slide]').forEach((item) => {
 
     item.addEventListener('click', () => {
 
@@ -698,6 +743,50 @@ menuBtn.addEventListener('click', () => {
 });
 
 
+let touchStartX = 0;
+let touchStartY = 0;
+let touchStartTime = 0;
+
+slider.addEventListener('touchstart', (event) => {
+    if (event.touches.length !== 1 || event.target.closest('button, .mockup-modal.active')) {
+        return;
+    }
+
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+    touchStartTime = Date.now();
+}, { passive: true });
+
+slider.addEventListener('touchend', (event) => {
+    if (!touchStartTime) {
+        return;
+    }
+
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+    const elapsed = Date.now() - touchStartTime;
+
+    touchStartTime = 0;
+
+    if (elapsed > 700 || Math.abs(deltaX) < 52 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) {
+        return;
+    }
+
+    if (deltaX < 0) {
+        nextSlide();
+    } else {
+        prevSlide();
+    }
+}, { passive: true });
+
+
+window.addEventListener('resize', updateControlsPosition);
+
+if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', updateControlsPosition);
+    window.visualViewport.addEventListener('scroll', updateControlsPosition);
+}
 
 
 

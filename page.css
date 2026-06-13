@@ -1,6 +1,154 @@
-.page0, .page2, .page5, .page10, .page13, .page18, .page29{
+.page0, .page2, .page5, .page10, .page13, .page18, .page29, .page42{
     background: #FFFFF3;
     color: #313131;
+}
+
+.page0,
+.page2,
+.page5,
+.page10,
+.page13,
+.page18,
+.page29,
+.page42{
+    overflow: hidden;
+}
+
+.page2,
+.page5,
+.page10,
+.page13,
+.page18,
+.page29{
+    padding: 36px 38px 60px;
+}
+
+.page0::before,
+.page2::before,
+.page5::before,
+.page10::before,
+.page13::before,
+.page18::before,
+.page29::before,
+.page42::before{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 145vw;
+    aspect-ratio: 3309 / 2547;
+    background: url("images/лента%20.svg") center / contain no-repeat;
+    pointer-events: none;
+}
+
+.page0 .container,
+.page2 .container,
+.page5 .container,
+.page10 .container,
+.page13 .container,
+.page18 .container,
+.page29 .container,
+.page42 .container{
+    position: relative;
+    z-index: 1;
+}
+
+.page0::before{
+    left: -38vw;
+    top: -48vw;
+    transform: rotate(-18deg);
+}
+
+.page2::before{
+    left: -48vw;
+    top: -52vw;
+    transform: rotate(0deg);
+}
+
+.page5::before{
+    left: -16vw;
+    top: -42vw;
+    transform: rotate(-8deg);
+}
+
+.page10::before{
+    left: -44vw;
+    top: -46vw;
+    transform: rotate(18deg);
+}
+
+.page13::before{
+    left: -34vw;
+    top: -38vw;
+    transform: rotate(52deg);
+}
+
+.page18::before{
+    left: -50vw;
+    top: -34vw;
+    transform: rotate(-26deg);
+}
+
+.page29::before{
+    left: -22vw;
+    top: -50vw;
+    transform: rotate(84deg);
+}
+
+.page42::before{
+    left: -58vw;
+    top: -30vw;
+    transform: rotate(124deg);
+}
+
+.page2-topbar,
+.page5-topbar,
+.page10-topbar,
+.page13-topbar,
+.page18-topbar,
+.page29-topbar{
+    position: relative;
+    z-index: 1;
+    align-items: flex-start;
+}
+
+.page2-topbar h1,
+.page5-topbar h1,
+.page10-topbar h1,
+.page13-topbar h1,
+.page18-topbar h1,
+.page29-topbar h1{
+    font-size: 40px;
+    line-height: 1.08;
+}
+
+.page2-topbar h2,
+.page5-topbar h2,
+.page10-topbar h2,
+.page13-topbar h2,
+.page18-topbar h2,
+.page29-topbar h2{
+    font-size: 20px;
+    line-height: 1.1;
+}
+
+.page2-topbar__info,
+.page5-topbar__info,
+.page10-topbar__info,
+.page13-topbar__info,
+.page18-topbar__info,
+.page29-topbar__info{
+    display: flex;
+    gap: 36px;
+}
+
+.page2-topbar__info span,
+.page5-topbar__info span,
+.page10-topbar__info span,
+.page13-topbar__info span,
+.page18-topbar__info span,
+.page29-topbar__info span{
+    color: #868686;
+    font-weight: 400;
 }
 /* page1 */
 .page1 .container{
@@ -65,6 +213,78 @@
 
 .toc-item:active,
 .toc-item:focus-visible{
+    color: #29AFD4;
+    transform: none;
+    outline: none;
+}
+
+.section-subnav{
+    display: grid;
+    gap: 18px 64px;
+    width: min(100%, 1040px);
+    margin-top: 34px;
+    margin-left: 57px;
+}
+
+.section-subnav--single{
+    grid-template-columns: minmax(0, 720px);
+}
+
+.section-subnav--double{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(6, auto);
+    grid-auto-flow: column;
+}
+
+.section-subnav__item{
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 12px;
+    padding: 0;
+    color: #313131;
+    font-size: 24px;
+    line-height: 1.14;
+    text-align: left;
+    transition: color .2s;
+}
+
+.section-subnav--single .section-subnav__item{
+    grid-template-columns: 36px minmax(0, 1fr);
+    font-size: 24px;
+}
+
+.section-subnav--double .section-subnav__item{
+    grid-template-columns: 56px minmax(0, 1fr);
+}
+
+.page18 .section-subnav,
+.page29 .section-subnav{
+    width: min(100%, 760px);
+}
+
+.page18 .section-subnav--double,
+.page29 .section-subnav--double{
+    grid-template-columns: minmax(0, 760px);
+    grid-template-rows: none;
+    grid-auto-flow: row;
+}
+
+.section-subnav__number{
+    color: #868686;
+}
+
+.section-subnav__title{
+    min-width: 0;
+}
+
+.section-subnav__item:hover{
+    color: #868686;
+    transform: none;
+}
+
+.section-subnav__item:active,
+.section-subnav__item:focus-visible{
     color: #29AFD4;
     transform: none;
     outline: none;

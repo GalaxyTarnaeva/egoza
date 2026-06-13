@@ -1,0 +1,1368 @@
+@media (max-width: 1024px){
+    html{
+        width: 100%;
+        height: 100%;
+    }
+
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .slider{
+        height: 100vh;
+        height: 100dvh;
+        touch-action: pan-y;
+    }
+
+    .slide{
+        align-items: flex-start;
+        padding: 34px 30px 104px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
+    }
+
+    .container{
+        height: auto;
+        min-height: calc(100dvh - 138px);
+    }
+
+    .controls{
+        left: 30px;
+        right: 30px;
+        bottom: 28px;
+        height: auto;
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    .menu{
+        margin-right: 12px;
+    }
+
+    .controls button,
+    .controls img{
+        width: 28px;
+        height: 24px;
+    }
+
+    .controls .pattern-toggle,
+    .controls .mockup-toggle{
+        height: 32px;
+        margin-left: 0;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .menu-panel{
+        left: -72vw;
+        width: 72vw;
+        max-width: 420px;
+        padding: 30px 18px;
+    }
+
+    .menu-panel.active{
+        left: 0;
+    }
+
+    .menu-item{
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .page0 h1{
+        max-width: 760px;
+        font-size: clamp(36px, 7vw, 68px);
+        line-height: 1.06;
+    }
+
+    .page1 .container{
+        min-height: 0;
+    }
+
+    .page1 h1{
+        font-size: clamp(32px, 5vw, 48px);
+        line-height: 1.1;
+    }
+
+    .page1-content{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 34px;
+        padding: 34px 0 0;
+    }
+
+    .page1-column--short{
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 34px;
+        padding-top: 0;
+    }
+
+    .toc-item{
+        grid-template-columns: 44px 1fr;
+        gap: 12px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.18;
+    }
+
+    .toc-item--section{
+        grid-template-columns: 32px 1fr;
+        margin-top: 18px;
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+
+    .section-subnav{
+        width: calc(100% - 48px);
+        margin-top: 30px;
+        margin-left: 48px;
+        gap: 16px 30px;
+    }
+
+    .section-subnav__item{
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 12px;
+        font-size: 22px;
+        line-height: 1.14;
+    }
+
+    .section-subnav--single .section-subnav__item{
+        grid-template-columns: 38px minmax(0, 1fr);
+        font-size: 22px;
+    }
+
+    .page18 .section-subnav,
+    .page29 .section-subnav{
+        width: calc(100% - 48px);
+    }
+
+    .page18 .section-subnav--double,
+    .page29 .section-subnav--double{
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+
+    .page2-topbar,
+    .page3-topbar,
+    .page4-topbar,
+    .page5-topbar,
+    .page10-topbar,
+    .page13-topbar,
+    .page18-topbar,
+    .page29-topbar{
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .page2-topbar h1,
+    .page3-topbar h1,
+    .page4-topbar h1,
+    .page5-topbar h1,
+    .page10-topbar h1,
+    .page13-topbar h1,
+    .page18-topbar h1,
+    .page29-topbar h1,
+    .title h1,
+    .titlepage h1{
+        font-size: clamp(24px, 4vw, 38px);
+        line-height: 1.12;
+    }
+
+    .page2-topbar h2,
+    .page3-topbar h2,
+    .page4-topbar h2,
+    .page5-topbar h2,
+    .page10-topbar h2,
+    .page13-topbar h2,
+    .page18-topbar h2,
+    .page29-topbar h2{
+        margin-left: auto;
+        font-size: 22px;
+        line-height: 1.1;
+    }
+
+    .page2 img{
+        width: min(300px, 46vw);
+        top: auto;
+        right: 30px;
+        bottom: 116px;
+    }
+
+    .page3 span,
+    .page4 span{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px 24px;
+    }
+
+    .page3-content,
+    .page4-content{
+        width: min(100%, 760px);
+        padding: 34px 0 0;
+        gap: 20px;
+    }
+
+    .page3-content p,
+    .page4-content p,
+    .text p{
+        font-size: 15px;
+        line-height: 1.36;
+    }
+
+    .page6 .container,
+    .page7 .container,
+    .page8 .container,
+    .page11 .container,
+    .page12 .container,
+    .page14 .container,
+    .page15 .container,
+    .page16 .container,
+    .page17 .container,
+    .page19 .container,
+    .page20 .container,
+    .page21 .container,
+    .page22 .container,
+    .page23 .container,
+    .page24 .container,
+    .page25 .container,
+    .page26 .container,
+    .page27 .container,
+    .page28 .container,
+    .page30 .container,
+    .page31 .container,
+    .page32 .container,
+    .page33 .container,
+    .page34 .container,
+    .page35 .container,
+    .page36 .container,
+    .page37 .container,
+    .page38 .container,
+    .page39 .container,
+    .page40 .container,
+    .page41 .container{
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .page6 .block1,
+    .page7 .block1,
+    .page8 .block1,
+    .page11 .block1,
+    .page12 .block1,
+    .page14 .block1,
+    .page15 .block1,
+    .page16 .block1,
+    .page17 .block1,
+    .page19 .block1,
+    .page20 .block1,
+    .page21 .block1,
+    .page22 .block1,
+    .page23 .block1,
+    .page24 .block1,
+    .page25 .block1,
+    .page26 .block1,
+    .page27 .block1,
+    .page28 .block1,
+    .page30 .block1,
+    .page31 .block1,
+    .page32 .block1,
+    .page33 .block1,
+    .page34 .block1,
+    .page35 .block1,
+    .page36 .block1,
+    .page37 .block1,
+    .page38 .block1,
+    .page39 .block1,
+    .page40 .block1,
+    .page41 .block1,
+    .page6 .block2,
+    .page7 .block2,
+    .page8 .block2,
+    .page11 .block2,
+    .page12 .block2,
+    .page14 .block2,
+    .page15 .block2,
+    .page16 .block2,
+    .page17 .block2,
+    .page19 .block2,
+    .page20 .block2,
+    .page21 .block2,
+    .page22 .block2,
+    .page23 .block2,
+    .page24 .block2,
+    .page25 .block2,
+    .page26 .block2,
+    .page27 .block2,
+    .page28 .block2,
+    .page30 .block2,
+    .page31 .block2,
+    .page32 .block2,
+    .page33 .block2,
+    .page34 .block2,
+    .page35 .block2,
+    .page36 .block2,
+    .page37 .block2,
+    .page38 .block2,
+    .page39 .block2,
+    .page40 .block2,
+    .page41 .block2{
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .titletext{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .title{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+    }
+
+    .titlepage{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .titlepage > .title:last-child{
+        margin-left: auto;
+    }
+
+    .text{
+        width: min(100%, 760px);
+        height: auto;
+        margin-left: 0;
+        gap: 18px;
+    }
+
+    .block2{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .block2 .content{
+        grid-row: auto;
+        width: 100%;
+        height: clamp(390px, 58dvh, 620px);
+        min-height: 0;
+        padding: 18px;
+        overflow: hidden;
+    }
+
+    .block2 .content img,
+    .hover-crossfade{
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    .hover-crossfade img{
+        max-width: none !important;
+        max-height: none !important;
+        object-fit: contain;
+    }
+
+    .hover-crossfade{
+        width: min(100%, 920px) !important;
+    }
+
+    .block2 .content img.content-logo{
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain;
+    }
+
+    .page8-palette{
+        left: 18px;
+        gap: 6px;
+    }
+
+    .page8-flower-button{
+        width: 26px;
+        height: 24px;
+    }
+
+    .page8-logo-preview{
+        width: min(500px, 74%) !important;
+        max-width: 74% !important;
+        max-height: 74% !important;
+    }
+
+    .page12 .content{
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .page12 .page12-font-image{
+        width: 100%;
+        max-width: 100% !important;
+        max-height: none !important;
+    }
+
+    .page14-titlepage,
+    .page16-titlepage,
+    .page17-titlepage,
+    .page23-titlepage,
+    .page28-titlepage,
+    .page30-titlepage,
+    .page31-titlepage,
+    .page36-titlepage,
+    .page41-titlepage{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .page14-tabs,
+    .page16-tabs,
+    .page17-tabs,
+    .page23-tabs,
+    .page28-tabs,
+    .page30-tabs,
+    .page31-tabs,
+    .page36-tabs,
+    .page41-tabs{
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 12px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: thin;
+    }
+
+    .page14-tab,
+    .page16-tab,
+    .page17-tab,
+    .page23-tab,
+    .page28-tab,
+    .page30-tab,
+    .page31-tab,
+    .page36-tab,
+    .page41-tab{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: 112px;
+        height: 30px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    .page15 .page15-image--pattern,
+    .page15 .page15-image--colors{
+        width: auto !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    .page17-variant{
+        gap: 24px;
+    }
+
+    .page17-variant--variant1.active,
+    .page17-variant--variant3.active{
+        padding: 18px;
+    }
+
+    .page17-step--full,
+    .page17-step--top{
+        width: 100%;
+    }
+
+    .page17-step--left,
+    .page17-step--right{
+        width: 48%;
+    }
+
+    .page17-step--left-small,
+    .page17-step--right-small{
+        width: 88%;
+    }
+
+    .page9{
+        padding: 34px 30px 104px;
+    }
+
+    .page9 .container{
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .page9-topbar{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .page9-topbar span{
+        display: inline;
+    }
+
+    .page9-topbar h1{
+        font-size: clamp(24px, 4vw, 38px);
+        line-height: 1.12;
+    }
+
+    .page9-topbar__number{
+        margin-left: auto;
+        font-size: 22px;
+        line-height: 1.1;
+    }
+
+    .page9-content{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 22px;
+    }
+
+    .page9-card{
+        grid-column: auto !important;
+        grid-row: auto !important;
+        justify-self: stretch;
+        width: 100%;
+        margin-top: 0 !important;
+    }
+
+    .page9-card__image{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .page9-card p{
+        white-space: normal;
+        font-size: 13px;
+    }
+
+    .page33-content{
+        justify-content: center;
+    }
+
+    .page33-content .hover-crossfade{
+        max-width: 100% !important;
+        transform: none;
+    }
+
+    .page33-content .hover-crossfade img:not(.hover-crossfade__hover){
+        transform: translateX(42%);
+    }
+
+    .page33-content .hover-crossfade:hover img:not(.hover-crossfade__hover){
+        opacity: 0;
+    }
+
+    .page35-content{
+        padding-top: 18px;
+    }
+
+    .page41-variant{
+        text-align: center;
+    }
+
+    .page42 .container{
+        min-height: calc(100dvh - 138px);
+    }
+
+    .page42-content img{
+        width: min(340px, 58vw);
+        max-width: 58vw;
+    }
+
+    .page42-year{
+        bottom: 20px;
+        font-size: 18px;
+    }
+
+    .mockup-modal{
+        padding: 26px;
+    }
+
+    .mockup-modal__dialog{
+        width: min(92vw, 920px);
+        height: min(76vh, 680px);
+        border-radius: 30px;
+    }
+
+    .mockup-modal__dialog img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape){
+    .slide{
+        align-items: center;
+        padding: 30px;
+        overflow: hidden;
+    }
+
+    .container{
+        height: 100%;
+        min-height: 0;
+    }
+
+    .page6 .container,
+    .page7 .container,
+    .page8 .container,
+    .page11 .container,
+    .page12 .container,
+    .page14 .container,
+    .page15 .container,
+    .page16 .container,
+    .page17 .container,
+    .page19 .container,
+    .page20 .container,
+    .page21 .container,
+    .page22 .container,
+    .page23 .container,
+    .page24 .container,
+    .page25 .container,
+    .page26 .container,
+    .page27 .container,
+    .page28 .container,
+    .page30 .container,
+    .page31 .container,
+    .page32 .container,
+    .page33 .container,
+    .page34 .container,
+    .page35 .container,
+    .page36 .container,
+    .page37 .container,
+    .page38 .container,
+    .page39 .container,
+    .page40 .container,
+    .page41 .container{
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(8, minmax(0, 1fr));
+        column-gap: 18px;
+        row-gap: 18px;
+    }
+
+    .page6 .block1,
+    .page7 .block1,
+    .page8 .block1,
+    .page11 .block1,
+    .page12 .block1,
+    .page14 .block1,
+    .page15 .block1,
+    .page16 .block1,
+    .page17 .block1,
+    .page19 .block1,
+    .page20 .block1,
+    .page21 .block1,
+    .page22 .block1,
+    .page23 .block1,
+    .page24 .block1,
+    .page25 .block1,
+    .page26 .block1,
+    .page27 .block1,
+    .page28 .block1,
+    .page30 .block1,
+    .page31 .block1,
+    .page32 .block1,
+    .page33 .block1,
+    .page34 .block1,
+    .page35 .block1,
+    .page36 .block1,
+    .page37 .block1,
+    .page38 .block1,
+    .page39 .block1,
+    .page40 .block1,
+    .page41 .block1{
+        grid-column: 1 / 4;
+        grid-row: 1 / 9;
+        width: auto;
+    }
+
+    .page6 .block2,
+    .page7 .block2,
+    .page8 .block2,
+    .page11 .block2,
+    .page12 .block2,
+    .page14 .block2,
+    .page15 .block2,
+    .page16 .block2,
+    .page17 .block2,
+    .page19 .block2,
+    .page20 .block2,
+    .page21 .block2,
+    .page22 .block2,
+    .page23 .block2,
+    .page24 .block2,
+    .page25 .block2,
+    .page26 .block2,
+    .page27 .block2,
+    .page28 .block2,
+    .page30 .block2,
+    .page31 .block2,
+    .page32 .block2,
+    .page33 .block2,
+    .page34 .block2,
+    .page35 .block2,
+    .page36 .block2,
+    .page37 .block2,
+    .page38 .block2,
+    .page39 .block2,
+    .page40 .block2,
+    .page41 .block2{
+        grid-column: 4 / 13;
+        grid-row: 1 / 9;
+        display: grid;
+        grid-template-rows: repeat(8, minmax(0, 1fr));
+        row-gap: 18px;
+        width: auto;
+    }
+
+    .titletext{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 18px;
+        row-gap: 38px;
+    }
+
+    .titletext .title,
+    .titletext .text{
+        grid-column: 1 / 4;
+    }
+
+    .title{
+        flex-wrap: wrap;
+        gap: 8px 12px;
+    }
+
+    .titlepage{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 14px;
+    }
+
+    .text{
+        width: 100%;
+        gap: 16px;
+    }
+
+    .text p,
+    .page19 .text p,
+    .page20 .text p,
+    .page21 .text p,
+    .page22 .text p,
+    .page23 .text p,
+    .page24 .text p,
+    .page25 .text p,
+    .page26 .text p,
+    .page27 .text p,
+    .page28 .text p,
+    .page30 .text p,
+    .page31 .text p,
+    .page32 .text p,
+    .page33 .text p,
+    .page34 .text p,
+    .page35 .text p,
+    .page36 .text p,
+    .page37 .text p,
+    .page38 .text p,
+    .page39 .text p,
+    .page40 .text p,
+    .page41 .text p{
+        font-size: 12px;
+        line-height: 1.22;
+    }
+
+    .title h1,
+    .titlepage h1{
+        font-size: clamp(24px, 3vw, 32px);
+        line-height: 1.1;
+    }
+
+    .block2{
+        gap: 0;
+    }
+
+    .block2 .content{
+        grid-row: 2 / 9;
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .page12 .content{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 24px 32px;
+    }
+
+    .page12 .block2 .content .page12-font-image{
+        width: calc((100% - 28px) / 2) !important;
+        height: auto !important;
+        max-width: calc((100% - 28px) / 2) !important;
+        max-height: 100% !important;
+    }
+
+    .hover-crossfade{
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    .page23-content .hover-crossfade,
+    .page24-content .hover-crossfade,
+    .page25-content .hover-crossfade,
+    .page27-content .hover-crossfade,
+    .page30-content .hover-crossfade,
+    .page32-content .hover-crossfade,
+    .page34-content .hover-crossfade,
+    .page35-content .hover-crossfade,
+    .page38-content .hover-crossfade,
+    .page39-content .hover-crossfade,
+    .page40-content .hover-crossfade,
+    .page41-content .hover-crossfade{
+        max-width: 98% !important;
+    }
+
+    .page31-content .hover-crossfade,
+    .page37-content .hover-crossfade{
+        width: auto !important;
+        max-width: 72% !important;
+    }
+
+    .page33-content{
+        justify-content: center;
+    }
+
+    .page33-content .hover-crossfade{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .page14-titlepage,
+    .page16-titlepage,
+    .page17-titlepage,
+    .page23-titlepage,
+    .page28-titlepage,
+    .page30-titlepage,
+    .page31-titlepage,
+    .page36-titlepage,
+    .page41-titlepage{
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        column-gap: 14px;
+        align-items: center;
+    }
+
+    .page14-tabs,
+    .page16-tabs,
+    .page17-tabs,
+    .page23-tabs,
+    .page28-tabs,
+    .page30-tabs,
+    .page31-tabs,
+    .page36-tabs,
+    .page41-tabs{
+        order: 0;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        overflow: visible;
+        padding-bottom: 0;
+    }
+
+    .page14-tab,
+    .page16-tab,
+    .page17-tab,
+    .page23-tab,
+    .page28-tab,
+    .page30-tab,
+    .page31-tab,
+    .page36-tab,
+    .page41-tab{
+        min-width: 92px;
+        height: 26px;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+    .page41-titlepage{
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: 8px;
+    }
+
+    .page41-title{
+        min-width: 0;
+    }
+
+    .page41-tabs{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: flex-start;
+    }
+
+    .page28-titlepage{
+        grid-template-columns: minmax(0, 1fr) auto;
+        row-gap: 8px;
+    }
+
+    .page28-title{
+        min-width: 0;
+    }
+
+    .page28-tabs{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 640px){
+    .slide{
+        padding: 22px 16px 76px;
+    }
+
+    .container{
+        min-height: 0;
+    }
+
+    .controls{
+        left: 16px;
+        right: 16px;
+        bottom: 18px;
+        gap: 16px;
+    }
+
+    .menu{
+        margin-right: 4px;
+    }
+
+    .controls button,
+    .controls img{
+        width: 26px;
+        height: 22px;
+    }
+
+    .controls .pattern-toggle{
+        width: 136px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .controls .mockup-toggle{
+        width: 118px;
+        height: 30px;
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    .menu-panel{
+        left: -88vw;
+        width: 88vw;
+        padding: 24px 14px;
+    }
+
+    .menu-panel.active{
+        left: 0;
+    }
+
+    .page0 h1{
+        max-width: 100%;
+        font-size: clamp(28px, 10vw, 42px);
+        line-height: 1.1;
+    }
+
+    .page1 h1{
+        font-size: clamp(28px, 9vw, 38px);
+    }
+
+    .page1-content,
+    .page1-column--short{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 26px;
+    }
+
+    .page1-column--short{
+        padding-top: 0;
+    }
+
+    .toc-item{
+        grid-template-columns: 42px 1fr;
+        gap: 10px;
+        margin-bottom: 9px;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+    .toc-item--section{
+        grid-template-columns: 30px 1fr;
+        margin-top: 16px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .section-subnav,
+    .section-subnav--single,
+    .section-subnav--double{
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+
+    .section-subnav{
+        width: 100%;
+        margin-top: 34px;
+        margin-left: 0;
+        gap: 14px;
+    }
+
+    .page18 .section-subnav,
+    .page29 .section-subnav{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .section-subnav__item,
+    .section-subnav--single .section-subnav__item{
+        grid-template-columns: 56px minmax(0, 1fr);
+        gap: 10px;
+        font-size: 18px;
+        line-height: 1.16;
+    }
+
+    .page2-topbar h1,
+    .page3-topbar h1,
+    .page4-topbar h1,
+    .page5-topbar h1,
+    .page10-topbar h1,
+    .page13-topbar h1,
+    .page18-topbar h1,
+    .page29-topbar h1,
+    .page9-topbar h1,
+    .title h1,
+    .titlepage h1{
+        font-size: clamp(22px, 7.6vw, 30px);
+        line-height: 1.12;
+    }
+
+    .page2-topbar h2,
+    .page3-topbar h2,
+    .page4-topbar h2,
+    .page5-topbar h2,
+    .page10-topbar h2,
+    .page13-topbar h2,
+    .page18-topbar h2,
+    .page29-topbar h2,
+    .page9-topbar__number{
+        font-size: 18px;
+    }
+
+    .page2 img{
+        width: min(220px, 58vw);
+        right: 16px;
+        bottom: 96px;
+    }
+
+    .page3-content,
+    .page4-content{
+        padding-top: 28px;
+        gap: 18px;
+    }
+
+    .page3-content p,
+    .page4-content p,
+    .text p{
+        font-size: 14px;
+        line-height: 1.34;
+    }
+
+    .page6 .container,
+    .page7 .container,
+    .page8 .container,
+    .page11 .container,
+    .page12 .container,
+    .page14 .container,
+    .page15 .container,
+    .page16 .container,
+    .page17 .container,
+    .page19 .container,
+    .page20 .container,
+    .page21 .container,
+    .page22 .container,
+    .page23 .container,
+    .page24 .container,
+    .page25 .container,
+    .page26 .container,
+    .page27 .container,
+    .page28 .container,
+    .page30 .container,
+    .page31 .container,
+    .page32 .container,
+    .page33 .container,
+    .page34 .container,
+    .page35 .container,
+    .page36 .container,
+    .page37 .container,
+    .page38 .container,
+    .page39 .container,
+    .page40 .container,
+    .page41 .container{
+        gap: 22px;
+    }
+
+    .titletext{
+        gap: 18px;
+    }
+
+    .titlepage{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 12px;
+    }
+
+    .titlepage > .title:first-child{
+        grid-column: 1;
+        grid-row: 1;
+        min-width: 0;
+    }
+
+    .titlepage > .title:last-child{
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        justify-self: end;
+        margin-left: 0;
+    }
+
+    .page14-tabs,
+    .page16-tabs,
+    .page17-tabs,
+    .page23-tabs,
+    .page28-tabs,
+    .page30-tabs,
+    .page31-tabs,
+    .page36-tabs,
+    .page41-tabs{
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .title{
+        gap: 8px 12px;
+    }
+
+    .text{
+        gap: 16px;
+    }
+
+    .block2{
+        gap: 14px;
+    }
+
+    .block2 .content{
+        height: clamp(380px, 66dvh, 620px);
+        padding: 8px;
+    }
+
+    .hover-crossfade{
+        width: 100% !important;
+    }
+
+    .block2 .content img,
+    .hover-crossfade img{
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .page30-content .hover-crossfade,
+    .page32-content .hover-crossfade,
+    .page33-content .hover-crossfade,
+    .page34-content .hover-crossfade,
+    .page35-content .hover-crossfade,
+    .page38-content .hover-crossfade,
+    .page39-content .hover-crossfade,
+    .page40-content .hover-crossfade,
+    .page41-content .hover-crossfade{
+        width: 230% !important;
+        max-width: none !important;
+        transform: none;
+    }
+
+    .page30-content,
+    .page32-content,
+    .page33-content,
+    .page34-content,
+    .page35-content,
+    .page38-content,
+    .page39-content,
+    .page40-content,
+    .page41-content{
+        height: clamp(250px, 34dvh, 320px);
+    }
+
+    .page8-palette{
+        left: 12px;
+        gap: 5px;
+    }
+
+    .page8-flower-button{
+        width: 23px;
+        height: 21px;
+    }
+
+    .page8-logo-preview{
+        width: min(390px, 88%) !important;
+        max-width: 88% !important;
+    }
+
+    .page12 .content{
+        padding: 12px;
+        gap: 14px;
+    }
+
+    .page14-tabs,
+    .page16-tabs,
+    .page17-tabs,
+    .page23-tabs,
+    .page28-tabs,
+    .page30-tabs,
+    .page31-tabs,
+    .page36-tabs,
+    .page41-tabs{
+        gap: 10px;
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
+    .page14-tab,
+    .page16-tab,
+    .page17-tab,
+    .page23-tab,
+    .page28-tab,
+    .page30-tab,
+    .page31-tab,
+    .page36-tab,
+    .page41-tab{
+        min-width: 104px;
+        height: 28px;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+    .page17-variant,
+    .page17-variant--variant3.active{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .page17-variant--variant1.active,
+    .page17-variant--variant3.active{
+        padding: 12px;
+    }
+
+    .page17-step--left,
+    .page17-step--right,
+    .page17-step--left-small,
+    .page17-step--right-small{
+        width: 100%;
+        max-height: 46%;
+    }
+
+    .page9{
+        padding: 22px 16px 94px;
+    }
+
+    .page9-content{
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .page9-card p{
+        font-size: 12px;
+    }
+
+    .page19 .text p,
+    .page20 .text p,
+    .page21 .text p,
+    .page22 .text p,
+    .page23 .text p,
+    .page24 .text p,
+    .page25 .text p,
+    .page26 .text p,
+    .page27 .text p,
+    .page28 .text p,
+    .page30 .text p,
+    .page31 .text p,
+    .page32 .text p,
+    .page33 .text p,
+    .page34 .text p,
+    .page35 .text p,
+    .page36 .text p,
+    .page37 .text p,
+    .page38 .text p,
+    .page39 .text p,
+    .page40 .text p,
+    .page41 .text p{
+        font-size: 13px;
+        line-height: 1.28;
+    }
+
+    .page35-content{
+        padding-top: 12px;
+    }
+
+    .page42-content img{
+        width: min(270px, 72vw);
+        max-width: 72vw;
+    }
+
+    .page42-year{
+        bottom: 16px;
+        font-size: 16px;
+    }
+
+    .mockup-modal{
+        padding: 16px;
+    }
+
+    .mockup-modal__dialog{
+        width: 94vw;
+        height: 72vh;
+        border-radius: 18px;
+    }
+}
